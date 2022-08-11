@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c1e2e;
+    font-family: Poppins, sans-serif;
+    color: #fff;
+}
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    font-size: 140px;
+    overflow: hidden;
+}
+
+.card::after {
+    position: absolute;
+    content: '';
+    inset: -100px;
+    border-radius: 10px;
+    background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        rgb(26, 26, 234)
+    );
+    animation: animate 3s linear infinite;
+}
+
+.card::before {
+    position: absolute;
+    content: '';
+    inset: -100px;
+    border-radius: 10px;
+    background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        rgb(185, 0, 195)
+    );
+    z-index: -1;
+    animation: animate 3s linear -1.5s infinite;
+}
+
+.card span {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #1c1e2e;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: #293462;
+}
+
+.wrap {
+    width: 100px;
+    height: 200px;
+}
+
+.ice {
+    width: 100px;
+    height: 150px;
+    background: #FFF1C1;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.stick {
+    margin: auto;
+    width: 30px;
+    height: 50px;
+    background: #FE5F55;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.shadow {
+    width: 100%;
+    height: 10px;
+    background: #A64942;
+}

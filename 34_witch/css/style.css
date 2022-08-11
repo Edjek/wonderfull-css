@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+
+    --purple-light: #8f65a9;
+    --purple: #500d78;
+    --purple-medium: #6f3990;
+    --purple-medium-dark: #5f2384;
+    --purple-dark: #3a0956;
+    --purple-xdark: #310849;
+    --purple-shadow: #1c0526;
+
+    --shadow: #9965ba;
+    --shadow-medium: #813eab;
+    --shadow-dark: #6f229f;
+    --shadow-darker: #4b0e6f;
+
+    --window: #360652;
+    --window-light: #350a4e;
+    --window-shadow: #460a68;
+
+    --orange: #ee8228;
+    --orange-dark: #c54c17;
+    --orange-medium: #d16d1b;
+
+    --sky: #410961;
+}
+
+body {
+    background: var(--purple);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 650px;
+    margin: 100px auto 35px;
+    overflow: hidden;
+}
+
+.shadow {
+    position: absolute;
+    z-index: -10;
+    bottom: -20px;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: var(--shadow);
+    box-shadow: 0 0 0 120px var(--shadow-medium), 0 0 0 220px var(--shadow-dark);
+}
+
+.scene {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.part {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 300px;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.part-1 {
+    gap: 70px;
+}
+
+.window-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.window {
+    position: relative;
+    width: 220px;
+    height: 280px;
+    background-color: var(--sky);
+    border: 12px solid var(--window);
+    border-radius: 5px;
+    box-shadow: -10px -5px 0 var(--window-shadow);
+    overflow: hidden;
+}
+
+.window::before {
+    position: absolute;
+    content: '';
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 115px;
+    border-bottom: 15px solid var(--window);
+    box-shadow: inset 0 -5px 0 5px rgba(174, 114, 196, 0.689);
+}
+
+.window::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    box-shadow: inset 0 -5px 0 5px rgba(174, 114, 196, 0.689);
+}
+
+.window-bottom {
+    position: relative;
+    bottom: 10px;
+    width: 250px;
+    height: 18px;
+    border-radius: 5px;
+    background-color: var(--window);
+    /* box-shadow: -10px -5px 0 var(--window-shadow); */
+}
+
+.moon {
+    position: relative;
+
+    top: 25px;
+    left: 110px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--white);
+    box-shadow: 0 0 13px var(--white), 0 0 0 30px var(--shadow-medium),
+        0 0 0 60px var(--shadow-dark), 0 0 0 90px var(--shadow-darker);
+}
+
+.moon::before {
+    position: absolute;
+    content: '';
+    top: 35px;
+    left: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 25px -10px 0 4px #ddd, 5px -20px 0 2px #ddd;
+    background-color: #ddd;
+}
+
+.stars {
+    position: absolute;
+    top: 50px;
+    left: -10px;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #aaa;
+    box-shadow: -70px -20px 0 2px #bbb, -60px -50px 0 1px #dddddddd,
+        -40px -35px 0 1px #bbb, -30px -10px 0 1px #bbbbbba1;
+}
+
+.ghost {
+    position: relative;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 45px;
+    height: 55px;
+    border-radius: 50px 50px 20px 10px;
+    background-color: #fff;
+    box-shadow: inset 10px 0 rgba(51, 51, 51, 0.2);
+    animation: ghost 15s ease-in-out infinite alternate;
+}
+
+.ghost::after {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    box-shadow: 15px -15px var(--sky);
+    background-color: var(--sky);
+}
+
+.ghost-eye {
+    width: 8px;
+    height: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.pumpkins {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.peduncle {
+    position: absolute;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+
+.peduncle-1 {
+    top: -20px;
+    left: -5px;
+    width: 60px;
+    height: 60px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgb(32, 172, 237);
+}
+
+.peduncle-2 {
+    top: 35px;
+    left: 70px;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid rgb(32, 206, 237);
+}
+
+.pumpkin {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px 45px;
+    background-color: var(--orange-dark);
+}
+
+.pumpkin::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    border-radius: 45px;
+    background-color: var(--orange);
+}
+
+.pumpkin-1::after {
+    width: 50px;
+    border-radius: 45px;
+}
+
+.pumpkin-2::after {
+    width: 25px;
+    border-radius: 45px;
+}
+
+.pumpkin-1 {
+    width: 100px;
+    height: 90px;
+    border-radius: 45px;
+    /* box-shadow: -15px -5px 0 3px var(--shadow-darker); */
+}
+
+.pumpkin-2 {
+    left: -30px;
+    width: 50px;
+    height: 45px;
+    border-radius: 45px 45px;
+}
+
+@keyframes ghost {
+    0%,
+    30%,
+    70%,
+    100% {
+        transform: translate(-100px, 0px);
+    }
+    38%,
+    62% {
+        transform: translate(20px, 0px);
+    }
+    38%,
+    62% {
+        transform: translate(20px, 1px);
+    }
+    41%,
+    59% {
+        transform: translate(20px, -1px);
+    }
+    44%,
+    56% {
+        transform: translate(20px, 1px);
+    }
+    47%,
+    53% {
+        transform: translate(20px, -1px);
+    }
+
+    50% {
+        transform: translate(20px, 1px);
+    }
+}
+
+/* Part 2 */
+.part-2 {
+}
+
+.cauldron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -5px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: var(--purple);
+    border-bottom: 25px solid var(--purple-xdark);
+    border-top: 25px solid transparent;
+}
+
+.cauldron::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    bottom: -20px;
+    width: 120px;
+    height: 40px;
+    background-color: var(--purple-shadow);
+}

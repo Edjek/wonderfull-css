@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: #1A4341;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.pump-top {
+    position: relative;
+    width: 150px;
+    height: 20px;
+    border-radius: 10px;
+    background: #F3AC3C;
+}
+
+.pump-top::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 20px;
+    height: 40px;
+    border-radius: 10px;
+    background: #F3AC3C;
+}
+
+.pump {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background: #F3AC3C;
+}
+
+.cap {
+    margin: auto;
+    width: 50px;
+    height: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #F3AC3C;
+}
+
+.top {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    background: #F3AC3C;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bottom {
+    position: relative;
+    width: 100px;
+    height: 80px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #998235;
+}
+
+.ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    z-index: 1;
+}
+
+.ball-1 {
+    top:30px;
+    right: 0;
+    background: #F3AC3C;
+}
+
+.ball-2 {
+    top: -24px;
+    background: #998235
+}
+
+.bubble {
+    position: absolute;
+    left: 130px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #998235;
+}
+
+.bubble-1 {
+    top: 50px;
+}
+
+.bubble-2 {
+    top: 80px;
+}

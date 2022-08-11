@@ -1,0 +1,113 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.frame {
+    display: grid;
+    place-content: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
+    background: #FFDCB5;
+    z-index: -2;
+}
+
+.pig {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: #F7949A;
+}
+
+.face {
+    display: flex;
+}
+
+.ear {
+    position: absolute;
+    top: -5px;
+    width: 60px;
+    height: 60px;
+    margin: 0 20px;
+    border: solid 7px #F7949A;
+    border-radius: 15px;
+    background: #FFB7BC;
+    z-index: -1;
+}
+
+.ear-l {
+    left: -10px;
+    transform: skew(10deg, 15deg);
+}
+
+.ear-r {
+    right: -10px;
+    transform: skew(-10deg, -15deg);
+}
+
+.eye {
+    width: 4px;
+    height: 4px;
+    margin: 0 18px;
+    border: solid 10px #fff;
+    border-radius: 50%;
+    background: #000;
+    animation: pupils 15s infinite ease-in-out;
+}
+
+.snout {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    background: #FFB7BC;
+}
+
+.nostril {
+    position: relative;
+    top: -4px;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #CE666D;
+}
+
+@keyframes pupils {
+
+    0%,
+    23%,
+    25%,
+    65%,
+    67%,
+    89%,
+    91%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    24%,
+    66%,
+    90% {
+        transform: scaleY(0);
+    }
+}

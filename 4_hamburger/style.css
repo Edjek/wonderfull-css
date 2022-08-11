@@ -1,0 +1,68 @@
+*, ::before, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(7, 5, 12);
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.hamburger {
+    position: absolute;
+    border-radius:4px;
+    width: 80px;
+    height: 10px;
+    background-color: white;
+    transition:  0.5s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    border-radius:4px;
+    background-color: white;
+}
+
+.hamburger::before {
+    transition:  0.3s;
+    bottom: 25px;
+}
+.hamburger::after {
+    transition:  0.5s;
+    top: 25px;
+}
+
+.active.hamburger {
+    background-color: rgb(7, 5, 12);
+}
+
+.active.hamburger::before {
+    transform: rotate(45deg);
+    width: 80px;
+    bottom: 0;
+}
+
+.active.hamburger::after {
+    transform: rotate(135deg);
+    width: 80px;
+    top: 0;
+}

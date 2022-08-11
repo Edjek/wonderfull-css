@@ -1,0 +1,91 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 5px;
+    margin: 0 20px;
+    transition: 0.5s;
+}
+
+.wrap:hover {
+    box-shadow: 5px 10px 10px 5px rgba(19, 17, 17, 0.3);
+}
+
+.card {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.card-1 {
+    padding: 20px;
+}
+
+.card-1 h2 {
+    margin-top:60px;
+    color: #277e33;
+}
+.card-1 p {
+    margin-top: 20px;
+}
+.card-1 a {
+    text-decoration: none;
+    width: 100px;
+    margin-top: 20px;
+    padding:5px 10px;
+    border-radius: 5px;
+    border: 1px solid #277e33;
+    color: #277e33;
+}
+.card-2 {
+    background: #277e33;
+    color: #fff;
+    font-size: 3.5em;
+    transition: .5s ease-in-out;
+}
+
+.wrap:hover .card-2 {
+    top: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #277e33;
+    background: #fff;
+    color: #277e33;
+    font-size: 1em;
+}
+
+.card-1 a:hover {
+    background: #277e33;
+    color: #fff;
+}

@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-cl: rgb(74, 157, 209); 
+}
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--main-cl);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover::before {
+    transform: rotate(5deg);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover::after {
+    transform: rotate(10deg);
+}
+
+.card .magic {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.card:hover .card-img {
+    transform: translateY(-100px);
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+    background-color: #fff;
+    transform-origin: bottom;
+    transform: translateY(0);
+    transition: 0.3s;
+}
+
+.card:hover .content {
+    transform: translateY(-100px);
+}

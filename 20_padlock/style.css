@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 4px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: #F57E15;
+}
+
+.lock {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.lock:hover .padlock {
+    transform: rotate(360deg);
+}
+
+.ring {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    box-shadow:
+        0 0 0 10px #D1DDE5,
+        4px 8px 16px 0 rgba(0, 0, 0, 0.3),
+        -3px -2px 1px 0 rgba(0, 0, 0, .3),
+        inset 8px 4px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+}
+
+.inside {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    border-radius: 50px 50px 0 0;
+    box-shadow:
+        4px 4px 1px 0 rgba(255, 255, 255, .8),
+        -3px -2px 1px 0 rgba(0, 0, 0, .3),
+        inset 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.padlock {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    top: 80px;
+    box-shadow:
+        0 0 0 6px #D1DDE5,
+        4px 8px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    background: #333;
+    transition: transform 1s ease-in-out;
+}
+
+.center {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.time {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.needle {
+    width: 2px;
+    height: 15px;
+    background: #fff;
+    margin-bottom: 5px;
+}
+
+.needle__light {
+    position: absolute;
+    height: 10px;
+}
+
+.a {
+    transform: translate(0, -50px);
+}
+
+.b {
+    transform: translate(35px, -35px) rotate(45deg);
+}
+
+.c {
+    transform: translate(50px, 0) rotate(90deg);
+}
+
+.d {
+    transform: translate(35px, 35px) rotate(135deg);
+}
+
+.e {
+    transform: translate(0, 50px) rotate(180deg);
+}
+
+.f {
+    transform: translate(-35px, 35px) rotate(225deg);
+}
+
+.g {
+    transform: translate(-50px, 0) rotate(270deg);
+}
+
+.h {
+    transform: translate(-35px, -35px) rotate(315deg);
+}
+
+.aa {
+    transform: translate(10px, -59px) rotate(9deg);
+}
+
+.ab {
+    transform: translate(20px, -56px) rotate(18deg);
+}
+
+.ac {
+    transform: translate(30px, -52px) rotate(27deg);
+}
+
+.ad {
+    transform: translate(38px, -47px) rotate(36deg);
+}
+
+.ba {
+    transform: translate(51px, -32px) rotate(54deg);
+}
+
+.bb {
+    transform: translate(55px, -24px) rotate(63deg);
+}
+
+.bc {
+    transform: translate(59px, -16px) rotate(72deg);
+}
+
+.bd {
+    transform: translate(61px, -8px) rotate(81deg);
+}
+
+.ca {
+    transform: translate(61px, 12px) rotate(99deg);
+}
+
+.cb {
+    transform: translate(59px, 22px) rotate(108deg);
+}
+
+.cc {
+    transform: translate(56px, 32px) rotate(117deg);
+}
+
+.cd {
+    transform: translate(51px, 39px) rotate(126deg);
+}
+
+.da {
+    transform: translate(36px, 54px) rotate(144deg);
+}
+
+.db {
+    transform: translate(28px, 59px) rotate(153deg);
+}
+
+.dc {
+    transform: translate(20px, 62px) rotate(162deg);
+}
+
+.dd {
+    transform: translate(10px, 65px) rotate(171deg);
+}
+
+.ea {
+    transform: translate(-10px,65px) rotate(189deg);
+}
+
+.eb {
+    transform: translate(-20px, 62px) rotate(198deg);
+}
+
+.ec {
+    transform: translate(-28px, 59px) rotate(207deg);
+}
+
+.ed {
+    transform: translate(-36px, 54px) rotate(216deg);
+}
+
+.fa {
+    transform: translate(-51px, 39px) rotate(234deg);
+}
+
+.fb {
+    transform: translate(-56px, 32px) rotate(243deg);
+}
+
+.fc {
+    transform: translate(-59px, 22px) rotate(252deg);
+}
+
+.fd {
+    transform: translate(-61px, 12px) rotate(261deg);
+}
+
+.ga {
+    transform: translate(-61px, -8px) rotate(279deg);
+}
+
+.gb {
+    transform: translate(-59px, -16px) rotate(288deg);
+}
+
+.gc {
+    transform: translate(-55px, -24px) rotate(297deg);
+}
+
+.gd {
+    transform: translate(-51px, -32px) rotate(306deg);
+}
+
+.ha {
+    transform: translate(-38px, -47px) rotate(324deg);
+}
+
+.hb {
+    transform: translate(-30px, -52px) rotate(333deg);
+}
+
+.hc {
+    transform: translate(-20px, -56px) rotate(342deg);
+}
+
+.hd {
+    transform: translate(-10px, -59px) rotate(351deg);
+}

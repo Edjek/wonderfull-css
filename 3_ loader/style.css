@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.frame {
+    display: grid;
+    place-content: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: #e56262;
+}
+
+.center {
+    display: grid;
+    place-content: center;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.ca {
+    width: 90px;
+    height: 90px;
+    animation: load-a 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) alternate infinite;
+}
+
+.cb {
+    width: 60px;
+    height: 60px;
+    animation: load-b 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) alternate infinite;
+}
+
+.cc {
+    width: 30px;
+    height: 30px;
+    animation: load-c 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) alternate infinite;
+}
+
+@keyframes load-a {
+
+    0%,
+    10% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes load-b {
+
+    0%,
+    40% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes load-c {
+
+    0%,
+    70% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

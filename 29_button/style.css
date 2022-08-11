@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    padding: 100px;
+    text-align: center;
+}
+
+.animated-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #000;
+    border-radius: 3px;
+}
+
+.animated-link span {
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background: #fbe94c;
+    padding: 18px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.15s ease-out;
+}
+
+.animated-link:hover span {
+    color: #000;
+    background-color: #ff90e8;
+    transform: translate(-6px, -6px);
+}

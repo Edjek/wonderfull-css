@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    display: grid;
+    place-content: center;
+    background: #191919;
+    height: 100vh;
+}
+
+.owl {
+    position: relative;
+    width: 220px;
+    height: 145px;
+}
+
+.hear-1, .hear-2 {
+    position: absolute;
+    width: 55px;
+    height: 60px;
+    background: #E08027;
+}
+
+.hear-2 {
+    right: 0;
+}
+
+.noise {
+    position: absolute;
+    bottom: 10px;
+    left: 85px;
+    width: 40px;
+    height: 50px;
+    background: #E08027;
+    transform: rotate(-45deg);
+}
+
+.eyes {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid#E08027;
+    border-radius: 100%;
+    background: #191919;
+}
+
+.eye-2 {
+    top: 0;
+    right: 0;
+    /* , 0 0 0 23px #191919; */
+}
+
+.oeil {
+    position: absolute;
+    top: -7.5px;
+    right: -7.5px;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    border: 15px solid#191919;
+    z-index: 1;
+}
+
+.pupil {
+    position: absolute;
+    top: 47px;
+    left: 45px;
+    width: 11px;
+    height: 6px;
+    border: 10px solid #E08027;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 0;
+    z-index: 1;
+}
+
+.pupil-2 {
+    left: -20px;
+}

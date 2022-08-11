@@ -1,0 +1,41 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(57, 85, 241);
+    width: 100%;
+    height: 100%;
+}
+
+.sun {
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: allday 5s infinite linear;
+}
+
+@keyframes allday {
+    0% {
+        transform: translate(-100px, 500px);
+    }
+    25% {
+        transform: translate(200px, 300px);
+    }
+    50% {
+        transform: translate(500px, 100px);
+    }
+    75% {
+        transform: translate(800px, 300px);
+    }
+    100% {
+        transform: translate(1100px, 500px);
+    }
+}

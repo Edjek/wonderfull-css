@@ -1,0 +1,278 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.space {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(-45deg, #7766c4, #241a49);
+  border-radius: 80px;
+  border: 20px solid #fff;
+  box-shadow: 0 0 0 1px #0001, 10px 10px 30px 0 #4b8c91;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 1px #fff;
+}
+
+.as {
+  top: 50px;
+  left: 30px;
+}
+
+.bs {
+  top: 70px;
+  left: 80px;
+  box-shadow: 0 0 2px 2px #fff;
+}
+
+.cs {
+  width: 1px;
+  height: 1px;
+  top: 150px;
+  left: 90px;
+}
+
+.ds {
+  top: 50px;
+  left: 230px;
+}
+
+.es {
+  width: 1px;
+  height: 1px;
+  top: 150px;
+  left: 255px;
+  box-shadow: 0 0 1px 1px #fff;
+}
+
+.fs {
+  top: 220px;
+  left: 20px;
+}
+
+.gs {
+  top: 120px;
+  left: 40px;
+}
+
+.hs {
+  top: 130px;
+  left: 260px;
+}
+
+.is {
+  top: 170px;
+  left: 60px;
+  width: 1px;
+  height: 1px;
+  box-shadow: 0 0 0px 1px #fff;
+}
+
+.js {
+  top: 100px;
+  left: 240px;
+  box-shadow: 0 0 3px 1px #fff;
+}
+
+.shooting_star {
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  box-shadow: 0 0 5px 1px #fff;
+  background: #fff;
+  transform-origin: right;
+  z-index: -1;
+  animation: shooting 2s linear infinite;
+}
+
+.sa {
+  top: 60px;
+  width: 20px;
+  animation-delay: 0.5s;
+}
+
+.sb {
+  top: 80px;
+  left: -15px;
+  width: 15px;
+  z-index: 1;
+  animation-delay: 1s;
+}
+
+.sc {
+  top: 120px;
+  left: -50px;
+  width: 30px;
+  animation-delay: 4s;
+}
+
+.cloud {
+  position: absolute;
+  bottom: -30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ca {
+  background: #8894f2;
+}
+
+.cb {
+  background: #a3f8ff;
+}
+
+.cc {
+  background: #e8eeef;
+}
+
+.cba {
+  left: -40px;
+  bottom: -70px;
+}
+
+.cbb {
+  top: -30px;
+  right: -120px;
+}
+
+.cbc {
+  top: 80px;
+  right: -130px;
+}
+
+.cma {
+  left: -30px;
+  bottom: -120px;
+}
+
+.cmb {
+  left: 130px;
+  bottom: -100px;
+}
+
+.cmc {
+  right: -100px;
+  bottom: -50px;
+}
+
+.cmd {
+  right: -150px;
+  bottom: 70px;
+}
+
+.cfa {
+  left: -10px;
+  bottom: -150px;
+}
+
+.cfb {
+  left: 100px;
+  bottom: -130px;
+}
+
+.cfc {
+  right: -80px;
+  bottom: -110px;
+}
+
+.cfd {
+  right: -150px;
+  bottom: 40px;
+}
+
+.planet {
+  position: absolute;
+  top: 5px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(-90deg, #314885 15%, #7971da 70%, #93d4e5 100%);
+  border-radius: 50%;
+}
+
+.moon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  background: #fff;
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+}
+
+.crater {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #f0f0e3;
+  border-radius: 50%;
+}
+
+.crater::before {
+  content: "";
+  top: -40px;
+  left: 20px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #f0f0e3;
+  border-radius: 50%;
+}
+
+.crater::after {
+  content: "";
+  top: -10px;
+  left: 50px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #f0f0e3;
+  border-radius: 50%;
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0px #fff9;
+  }
+
+  to {
+    box-shadow: 0 0 0 10px #fff0;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0) scaleX(0);
+  }
+
+  50% {
+    transform: translateX(200px) scaleX(2);
+  }
+
+  100% {
+    transform: translateX(400px) scaleX(1);
+  }
+}

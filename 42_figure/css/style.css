@@ -1,0 +1,35 @@
+:root {
+    --circle: #fdad67;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: var(--circle);
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    width: 400px;
+    height: 400px;
+    background-color: #2377ab;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: var(--circle);
+    border-radius: 50%;
+    box-shadow: 200px 200px 0 var(--circle), 200px -200px 0 var(--circle),
+        -200px 200px 0 var(--circle), -200px -200px 0 var(--circle);
+}

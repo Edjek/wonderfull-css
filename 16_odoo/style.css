@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: #191919;
+}
+
+.odoo {
+    position: relative;
+    display: flex;
+    top: 12px;
+}
+
+.round {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 20px solid #8F8F8F;
+    margin: 1px;
+}
+
+.pink {
+    border: 20px solid #714B67;
+}
+
+.d::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    border-radius: 20px;
+    background: #8F8F8F;
+    right: -20px;
+    top: -40px
+}
