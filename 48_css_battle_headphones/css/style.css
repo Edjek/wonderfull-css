@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #293d7e;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    
+}
+
+.headphone {
+    position: relative;
+    top: -20px;
+    width: 130px;
+    height: 130px;
+    border-radius: 100% 100% 0 0;
+    border: 20px solid #6E91CA;
+    border-bottom-color: transparent;
+  }
+  
+  .headphone::before {
+    position: absolute;
+    content: '';
+    left:-20px;
+    bottom: -50px;
+    width: 60px;
+    height: 80px;
+    background: #6E91CA;
+    border-radius: 40px 40px 60px 60px;
+    box-shadow: 110px 0 #6E91CA;
+  }
