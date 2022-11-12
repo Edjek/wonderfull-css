@@ -1,0 +1,74 @@
+:root {
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(rgb(107, 175, 202), rgb(38, 101, 156));
+}
+
+.cloud {
+    position: relative;
+    top: 35%;
+    width: 240px;
+    height: 80px;
+    border-radius: 80px;
+    background-color: #fff;
+    animation: fly 20s infinite linear;
+}
+
+.cloud::before {
+    content: '';
+    position: absolute;
+    top: -70%;
+    left: 10%;
+    width: 50%;
+    height: 150%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.cloud::after {
+    content: '';
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    width: 33%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.cloud:nth-child(2) {
+    top: 10%;
+    width: 90px;
+    height: 30px;
+    animation-duration: 25s;
+}
+
+.cloud:nth-child(3) {
+    top: 40%;
+    width: 150px;
+    height: 50px;
+    animation-duration: 16s;
+}
+
+@keyframes fly {
+    from {
+        transform: translate(-50vw);
+    }
+    to {
+        transform: translate(130vw);
+    }
+}

@@ -1,0 +1,90 @@
+:root {
+    --cl-text: #000;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: #222;
+    color: var(--cl-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 250px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    transition: 0.5s linear;
+}
+
+.container span {
+    cursor: pointer;
+    position: relative;
+    perspective: 500px;
+}
+
+.container span::before,
+.container span::after {
+    position: absolute;
+    content: attr(data-letter);
+    inset: 0;
+    transform-origin: left;
+    transition: 0.2s ease-in-out;
+}
+
+.container span:hover::before {
+    color: rgba(0, 0, 0, 0.15);
+    transform: scaleX(0.8) skewY(20deg);
+}
+
+.container span::after {
+    color: #fff;
+    transform: rotateY(-30deg);
+}
+
+.container span:hover::after {
+    transform: rotateY(-40deg);
+}
+
+.container span:nth-child(1):hover::after {
+    color: rgb(189, 7, 7);
+}
+.container span:nth-child(2):hover::after {
+    color: rgb(4, 4, 155);
+}
+.container span:nth-child(3):hover::after {
+    color: rgb(231, 231, 3);
+}
+.container span:nth-child(4):hover::after {
+    color: rgb(7, 123, 7);
+}
+.container span:nth-child(5):hover::after {
+    color: rgb(161, 21, 161);
+}
+.container span:nth-child(6):hover::after {
+    color: rgb(99, 99, 99);
+}
+.container span:nth-child(7):hover::after {
+    color: rgb(230, 173, 0);
+}
+.container span:nth-child(8):hover::after {
+    color: rgb(123, 223, 0);
+}
+.container span:nth-child(9):hover::after {
+    color: rgb(40, 223, 255);
+}

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --cl-text: #333;
+    --cl-purple: rgb(190, 5, 190);
+    --cl-blue: rgb(0, 57, 170);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, var(--cl-purple), var(--cl-blue));
+    color: var(--cl-text);
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+a {
+    color: var(--cl-text);
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 22px;
+}
+
+.toggle {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f6f6f6;
+    cursor: pointer;
+    color: var(--cl-purple);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.toggle::before {
+    content: 'Menu';
+}
+
+.toggle.active::before {
+    content: 'Close';
+}
+
+.toggle span {
+    position: relative;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle span::before,
+.toggle span::after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--cl-purple);
+    transition: transform 0.4s;
+}
+
+.toggle.toggle span::before {
+    transform: translateY(-5px);
+}
+
+.toggle.toggle span::after {
+    transform: translateY(5px);
+}
+
+.toggle.toggle.active span::before {
+    transform: translateY(0) rotate(225deg);
+}
+
+.toggle.toggle.active span::after {
+    transform: translateY(0) rotate(135deg);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+nav a {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: visibility 0.3s var(--delay), opacity 0.3s var(--delay),
+        transform 0.3s var(--delay);
+}
+
+nav a:hover {
+    background-color: #f6f6f6;
+    color: var(--cl-purple);
+}
+
+.toggle.active ~ nav a {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
