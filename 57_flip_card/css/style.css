@@ -107,7 +107,7 @@ a {
     background-size: cover;
     background-position: -50px center;
     margin: 0 auto;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.6);
 }
 
 .card-back .card-icons {
@@ -125,7 +125,7 @@ a {
     height: 42px;
     border-radius: 50%;
     background-color: rgb(106, 5, 194);
-    box-shadow: 4px 4px 16px rgb(0, 0, 0);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     font-size: 18px;
     color: #fff;
     transition: opacity 0.3s;
