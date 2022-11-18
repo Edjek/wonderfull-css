@@ -20,8 +20,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
     min-height: 100vh;
-    background: linear-gradient(-225deg, #5e35b0, #67bbe3);
+    background: linear-gradient(-45deg, #b900c6, #003cff);
     color: var(--main-color);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10vw;
