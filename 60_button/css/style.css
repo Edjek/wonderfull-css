@@ -1,0 +1,48 @@
+:root {
+    --bg-cl: #f8b732;
+    --main-cl: #fff;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-cl);
+    min-height: 100vh;
+    color: var(--main-cl);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+    width: 230px;
+    height: 80px;
+    background-color: green;
+    box-shadow: 10px 10px #000;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: skew(-20deg);
+    transition: 0.3s;
+}
+
+.button:hover {
+    cursor: pointer;
+    width: 280px;
+}

@@ -1,0 +1,98 @@
+:root {
+    --form-cl: #24232b;
+    --text-cl: #fff;
+    --bg-cl: #0e0d13;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-cl);
+    color: var(--text-cl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial Narrow', 'Franklin Gothic', Arial, sans-serif;
+    letter-spacing: 0.1em;
+}
+h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    color: #6a6879;
+}
+
+input {
+    border: none;
+}
+
+.pswd-generator {
+    width: 400px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pswd-generate {
+    background-color: var(--form-cl);
+    height: 50px;
+}
+
+.form-pswd-generator {
+    padding: 20px;
+    background-color: var(--form-cl);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-pswd-generator .char-lenght {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-pswd-generator .char-lenght .result {
+    color: #a4ffaf;
+    font-size: 20px;
+}
+
+.form-pswd-generator input[type='range'] {
+    accent-color: #fff;
+    background: red;
+    color: red;
+}
+.form-pswd-generator input[type='checkbox'] {
+    accent-color: var(--form-cl);
+    
+}
+
+.form-pswd-generator .strenght {
+    height: 40px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    background-color: #18171f;
+    text-transform: uppercase;
+}
+
+input[type='submit'] {
+    height: 40px;
+    text-transform: uppercase;
+    background-color: #a4ffaf;
+}

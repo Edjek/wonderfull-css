@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.container:hover {
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.container img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: left;
+    shape-outside: margin-box;
+    margin: 0 20px 20px 0;
+}
+

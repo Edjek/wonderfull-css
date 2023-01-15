@@ -1,0 +1,54 @@
+:root {
+    --bg-cl: rgb(28, 26, 44);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-cl);
+    min-height: 100vh;
+}
+
+.circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: var(--bg-cl);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: -5px;
+    z-index: -1;
+    background: #333;
+    border-radius: 50%;
+    background: conic-gradient(transparent, transparent, rgb(107, 13, 134));
+    animation: turn 3s infinite linear;
+}
+
+@keyframes turn {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

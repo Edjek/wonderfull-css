@@ -1,0 +1,89 @@
+:root {
+    --bg-cl: #f8b732;
+    --main-cl: #fff;
+    --thickness: 7px;
+    --border: var(--thickness) solid var(--main-cl);
+    --border-radius: 15px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-cl);
+    min-height: 100vh;
+    color: var(--main-cl);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.btn {
+    background-color: rgb(0, 140, 255);
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
+input[type='checkbox'] {
+    visibility: hidden;
+    position: absolute;
+}
+
+.wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: var(--border-radius);
+    border: var(--border);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: var(--thickness);
+    background-color: var(--main-cl);
+    left: 10%;
+    border-radius: var(--border-radius);
+    transition: 0.3s;
+}
+
+.wrapper::before {
+    top: 30%;
+}
+
+.wrapper::after {
+    bottom: 30%;
+}
+
+input[type='checkbox']:checked ~ .wrapper::before,
+input[type='checkbox']:checked ~ .wrapper::after {
+    top: 50%;
+    transform: translateY(-100%);
+}
+
+input[type='checkbox']:checked ~ .wrapper::before {
+    transform: rotate(45deg);
+}
+
+input[type='checkbox']:checked ~ .wrapper::after {
+    transform: rotate(315deg);
+}

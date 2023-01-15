@@ -1,0 +1,65 @@
+:root {
+    --bg-cl: #f8b732;
+    --main-cl: #fff;
+    --thickness: .7vw;
+    --border: var(--thickness) solid var(--main-cl);
+    --border-radius: 1.4vw;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-cl);
+}
+
+.wrapper {
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    border-radius: var(--border-radius);
+    border: var(--border);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: var(--thickness);
+    background-color: var(--main-cl);
+    left: 10%;
+    border-radius: var(--border-radius);
+    transition: 0.3s;
+}
+
+.wrapper::before {
+    top: 30%;
+}
+
+.wrapper::after {
+    bottom: 30%;
+}
+
+.wrapper.active::before {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.wrapper.active::after {
+    top: 50%;
+    transform: translateY(-50%) rotate(315deg);
+}

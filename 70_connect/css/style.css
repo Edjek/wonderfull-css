@@ -1,0 +1,41 @@
+:root {
+    --cl-text-connected: 23, 100, 23;
+    --cl-text-disconnected: 97, 23, 23;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.status-text {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.connected {
+    border: 2px solid rgb(var(--cl-text-connected), 0.2);
+    background-color: rgb(228, 247, 220);
+    color: var(--cl-text-connected);
+}
+
+.disconnected {
+    border: 2px solid rgb(var(--cl-text-disconnected), 0.2);
+    background-color: rgb(247, 220, 220);
+    color: rgb(var(--cl-text-disconnected));
+}
