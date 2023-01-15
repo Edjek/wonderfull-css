@@ -15,7 +15,6 @@ body {
     display: grid;
     place-items: center;
     min-height: 100vh;
-    
 }
 
 .headphone {
@@ -24,18 +23,18 @@ body {
     width: 130px;
     height: 130px;
     border-radius: 100% 100% 0 0;
-    border: 20px solid #6E91CA;
+    border: 20px solid #6e91ca;
     border-bottom-color: transparent;
-  }
-  
-  .headphone::before {
+}
+
+.headphone::before {
     position: absolute;
     content: '';
-    left:-20px;
+    left: -20px;
     bottom: -50px;
     width: 60px;
     height: 80px;
-    background: #6E91CA;
+    background: #6e91ca;
     border-radius: 40px 40px 60px 60px;
-    box-shadow: 110px 0 #6E91CA;
-  }
+    box-shadow: 70px 0 #6e91ca;
+}
