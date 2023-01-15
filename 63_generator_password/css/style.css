@@ -96,3 +96,7 @@ input[type='submit'] {
     text-transform: uppercase;
     background-color: #a4ffaf;
 }
+
+.mb {
+    margin-bottom: 8px;
+}
