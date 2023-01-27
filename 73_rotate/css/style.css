@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-cl: 1px solid rgb(236, 64, 64);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: orange;
+}
+
+.wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    animation: turn 3s infinite;
+}
+
+.container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: var(--main-cl);
+    border-radius: 50%;
+}
+
+.container-1 {
+    animation: dance 3s infinite alternate;
+}
+
+.container-2 {
+    animation: dance-2 3s infinite alternate;
+}
+
+.container-3 {
+    animation: dance-3 3s infinite alternate;
+}
+
+.container-4 {
+    animation: dance-4 3s infinite alternate;
+}
+
+@keyframes dance {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-80px, 0);
+    }
+    50% {
+        transform: translate(-80px, 80px);
+    }
+    75% {
+        transform: translate(-80px, 80px) rotate(45deg);
+    }
+    100% {
+        transform: translate(-80px, 80px) rotate(45deg);
+    }
+}
+
+@keyframes dance-2 {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(80px, 0);
+    }
+    50% {
+        transform: translate(80px, 80px);
+    }
+    75% {
+        transform: translate(80px, 80px) rotate(45deg);
+    }
+    100% {
+        transform: translate(80px, 80px) rotate(45deg);
+    }
+}
+
+@keyframes dance-3 {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-80px, 0);
+    }
+    50% {
+        transform: translate(-80px, -80px);
+    }
+    75% {
+        transform: translate(-80px, -80px) rotate(45deg);
+    }
+    100% {
+        transform: translate(-80px, -80px) rotate(45deg);
+    }
+}
+
+@keyframes dance-4 {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(80px, 0);
+    }
+    50% {
+        transform: translate(80px, -80px);
+    }
+    75% {
+        transform: translate(80px, -80px) rotate(45deg);
+    }
+    100% {
+        transform: translate(80px, -80px) rotate(45deg);
+    }
+}
+
+@keyframes turn {
+    0% {
+    }
+    75% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

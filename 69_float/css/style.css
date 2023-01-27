@@ -41,5 +41,11 @@ body {
     float: left;
     shape-outside: margin-box;
     margin: 0 20px 20px 0;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+    transition: .2s;
+}
+
+.container:hover img {
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
 }
 
