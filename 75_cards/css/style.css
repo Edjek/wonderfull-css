@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+
+.container {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: absolute;
+    aspect-ratio: 5/7;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-big {
+    border: 4px solid #fff;
+}
+
+.card-big {
+    width: 30vmin;
+    border-radius: 1vmin;
+}
+
+.card-little {
+    width: 12vmin;
+    border-radius: 2vmin;
+}
+
+.card:nth-child(2) {
+    transform: translate(-10%) rotate(-3deg);
+}
+
+.card:nth-child(4) {
+    transform: rotate(3deg);
+}
+
+.card:nth-child(6) {
+    transform: translate(-3%) rotate(-3deg);
+}
+
+.card:nth-child(8) {
+    transform: translate(5%, 3%) rotate(5deg);
+}
+
+/* HOVER */
+.container:hover .card-big {
+    box-shadow: -20px 20px 20px 20px rgba(0, 0, 0, 0.6);
+}
+
+.container:hover .card:nth-child(2) {
+    transform: translate(-100%, 3%) rotate(-20deg);
+}
+
+.container:hover .card:nth-child(4) {
+    transform: translate(-50%) rotate(-5deg);
+}
+
+.container:hover .card:nth-child(6) {
+    transform: rotate(10deg);
+}
+
+.container:hover .card:nth-child(8) {
+    transform: translate(50%, 6%) rotate(25deg);
+}
+
+.container:hover .card:nth-child(1) {
+    transform: translate(170%, 205%) rotate(15deg);
+}
+
+.container:hover .card:nth-child(3) {
+    transform: translate(-300%, 160%) rotate(-15deg);
+}
+
+.container:hover .card:nth-child(5) {
+    transform: translate(-220%, -160%) rotate(20deg);
+}
+
+.container:hover .card:nth-child(7) {
+    transform: translate(200%, -130%) rotate(-20deg);
+}
