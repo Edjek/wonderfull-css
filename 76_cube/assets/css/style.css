@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-cl: rgb(27, 45, 162);
+    --second-cl: rgb(229, 43, 217);
+    --third-cl: rgb(229, 152, 43);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    perspective: 2000px;
+}
+
+.cube {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    animation: dance 10s infinite linear;
+}
+
+.cube-face {
+    position: absolute;
+    width: 16vw;
+    height: 16vw;
+}
+
+.front {
+    background-image: linear-gradient(45deg, var(--first-cl), var(--second-cl), var(--third-cl));
+    transform: translateZ(8vw);
+}
+
+.left {
+    background-image: linear-gradient(-45deg, var(--first-cl), var(--second-cl), var(--third-cl));
+    transform: translateX(50%) rotateY(90deg);
+}
+
+.back {
+    background-image: linear-gradient(45deg, var(--first-cl), var(--second-cl), var(--third-cl));
+    transform: translateZ(-8vw) rotateY(180deg);
+}
+
+.right {
+    background-image: linear-gradient(-45deg, var(--first-cl), var(--second-cl), var(--third-cl));
+    transform: translateX(-50%) rotateY(270deg);
+}
+
+.top {
+    background-image: linear-gradient(135deg, var(--first-cl), var(--second-cl), var(--third-cl));
+    transform: translateY(-50%) rotateX(90deg);
+}
+
+.bottom {
+    background-image: linear-gradient(45deg, var(--first-cl), var(--second-cl), var(--third-cl));
+    transform: translateY(50%) rotateX(90deg);
+}
+
+@keyframes dance {
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}

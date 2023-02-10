@@ -74,16 +74,16 @@ input[type='checkbox'] {
     bottom: 30%;
 }
 
-input[type='checkbox']:checked ~ .wrapper::before,
-input[type='checkbox']:checked ~ .wrapper::after {
+input[type='checkbox']:checked + .wrapper::before,
+input[type='checkbox']:checked + .wrapper::after {
     top: 50%;
     transform: translateY(-100%);
 }
 
-input[type='checkbox']:checked ~ .wrapper::before {
+input[type='checkbox']:checked + .wrapper::before {
     transform: rotate(45deg);
 }
 
-input[type='checkbox']:checked ~ .wrapper::after {
+input[type='checkbox']:checked + .wrapper::after {
     transform: rotate(315deg);
 }
