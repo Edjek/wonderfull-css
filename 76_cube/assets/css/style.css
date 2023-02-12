@@ -11,6 +11,7 @@
     --second-cl: rgb(229, 43, 217);
     --third-cl: rgb(229, 152, 43);
 }
+
 body {
     display: flex;
     justify-content: center;
@@ -27,13 +28,19 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     transform-style: preserve-3d;
-    animation: dance 10s infinite linear;
+    animation: dance 20s infinite linear;
 }
 
 .cube-face {
     position: absolute;
     width: 16vw;
     height: 16vw;
+}
+
+.cube-face img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
 }
 
 .front {
@@ -67,7 +74,10 @@ body {
 }
 
 @keyframes dance {
-    to {
-        transform: rotateX(360deg) rotateY(360deg);
+    0% {
+        transform: rotateX(15deg) rotateY(0);
+    }
+    100% {
+        transform: rotateX(15deg) rotateY(360deg);
     }
 }
