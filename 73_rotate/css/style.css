@@ -18,14 +18,14 @@ body {
     background-color: orange;
 }
 
-.wrapper {
+.container {
     position: relative;
     width: 200px;
     height: 200px;
     animation: turn 3s infinite;
 }
 
-.container {
+.circle {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -33,19 +33,19 @@ body {
     border-radius: 50%;
 }
 
-.container-1 {
+.circle-1 {
     animation: dance 3s infinite alternate;
 }
 
-.container-2 {
+.circle-2 {
     animation: dance-2 3s infinite alternate;
 }
 
-.container-3 {
+.circle-3 {
     animation: dance-3 3s infinite alternate;
 }
 
-.container-4 {
+.circle-4 {
     animation: dance-4 3s infinite alternate;
 }
 

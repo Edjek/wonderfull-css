@@ -33,7 +33,7 @@ a {
 }
 
 .card {
-    width: 240px;
+    width: 280px;
     aspect-ratio: 5/7;
     margin: 0 auto;
     perspective: 1000px;
@@ -60,20 +60,21 @@ a {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
 .card-front {
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.9)), url(../img/code.jpg);
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding: 20px;
+
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.9)), url(../img/code.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .card-front .card-content {
@@ -94,21 +95,21 @@ a {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .card-back .card-img {
-    width: 130px;
-    height: 130px;
-    margin-bottom: 150px;
-    border-radius: 50%;
-    background-image: url(../img/pexels-andrea-piacquadio-716411.jpg);
+    width: 100%;
+    aspect-ratio: 7/5;
+    background-image: url(../img/pexels-cottonbro-studio-8721342.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    margin: 0 auto;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-back .card-back-content {
+    flex-grow: 1;
+    padding: 50px 0;
 }
 
 .card-back .card-icons {
@@ -126,14 +127,14 @@ a {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background-color: rgb(106, 5, 194);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    background-color: rgb(5, 175, 194);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     font-size: 18px;
     color: #fff;
     transition: opacity 0.3s;
 }
 
 .card-back .card-icons a:hover {
-    opacity: 0.7;
+    opacity: 0.8;
     cursor: pointer;
 }
