@@ -9,22 +9,17 @@
 body {
     display: grid;
     place-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
     width: 500px;
     height: 500px;
-    background: conic-gradient(
-        rgb(141, 30, 181),
-        rgb(32, 32, 230),
-        rgb(58, 2, 2),
-        rgb(141, 30, 181)
-    );
+    background: conic-gradient(rgb(141, 30, 181), rgb(32, 32, 230), rgb(58, 2, 2), rgb(141, 30, 181));
     /* filter: blur(5px); */
     border-radius: 50%;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
-    /* animation: turn 3s linear infinite; */
+    animation: turn 3s linear infinite;
 }
 
 @keyframes turn {

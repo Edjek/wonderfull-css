@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 
-:root{
-    --main-cl: rgb(74, 157, 209); 
+:root {
+    --main-cl: rgb(74, 157, 209);
 }
 body {
     display: grid;
@@ -80,7 +80,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .card:hover .card-img {
@@ -102,4 +102,12 @@ body {
 
 .card:hover .content {
     transform: translateY(-100px);
+}
+
+.card .content h1 {
+    font-size: 20px;
+}
+
+.card .content h2 {
+    font-size: 16px;
 }
