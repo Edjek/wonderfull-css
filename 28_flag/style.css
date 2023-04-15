@@ -65,33 +65,13 @@ ul li:hover::before {
 }
 
 ul li:nth-child(1):hover::before {
-    background: linear-gradient(
-        to left,
-        #005bbc 0%,
-        #005bbc 33%,
-        #fff 33%,
-        #fff 66%,
-        #d52b06 66%,
-        #d52b06 100%
-    );
+    background: linear-gradient(to left, #005bbc 0%, #005bbc 33%, #fff 33%, #fff 66%, #d52b06 66%, #d52b06 100%);
 }
 
 ul li:nth-child(2):hover::before {
-    background: linear-gradient(
-        #005bbc 0%,
-        #005bbc 50%,
-        #ffd600 50%,
-        #ffd600 100%
-    );
+    background: linear-gradient(#005bbc 0%, #005bbc 50%, #ffd600 50%, #ffd600 100%);
 }
 
 ul li:nth-child(3):hover::before {
-    background: linear-gradient(
-        white 0%,
-        white 33%,
-        #0033a6 33%,
-        #0033a6 66%,
-        #d52b06 66%,
-        #d52b06 100%
-    );
+    background: linear-gradient(white 0%, white 33%, #0033a6 33%, #0033a6 66%, #d52b06 66%, #d52b06 100%);
 }

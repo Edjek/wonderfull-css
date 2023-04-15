@@ -18,7 +18,7 @@ body {
     height: 400px;
     border-radius: 5px;
     box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.3);
-    background: #FFDCB5;
+    background: #ffdcb5;
     z-index: -2;
 }
 
@@ -31,7 +31,7 @@ body {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    background: #F7949A;
+    background: #f7949a;
 }
 
 .face {
@@ -44,9 +44,9 @@ body {
     width: 60px;
     height: 60px;
     margin: 0 20px;
-    border: solid 7px #F7949A;
+    border: solid 7px #f7949a;
     border-radius: 15px;
-    background: #FFB7BC;
+    background: #ffb7bc;
     z-index: -1;
 }
 
@@ -79,7 +79,7 @@ body {
     width: 60px;
     height: 50px;
     border-radius: 50%;
-    background: #FFB7BC;
+    background: #ffb7bc;
 }
 
 .nostril {
@@ -89,11 +89,10 @@ body {
     height: 12px;
     margin: 0 5px;
     border-radius: 50%;
-    background: #CE666D;
+    background: #ce666d;
 }
 
 @keyframes pupils {
-
     0%,
     23%,
     25%,

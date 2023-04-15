@@ -15,7 +15,7 @@ body {
 .ice {
     width: 100px;
     height: 150px;
-    background: #FFF1C1;
+    background: #fff1c1;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 20px;
@@ -26,7 +26,7 @@ body {
     margin: auto;
     width: 30px;
     height: 50px;
-    background: #FE5F55;
+    background: #fe5f55;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -34,5 +34,5 @@ body {
 .shadow {
     width: 100%;
     height: 10px;
-    background: #A64942;
+    background: #a64942;
 }

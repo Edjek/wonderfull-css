@@ -3,7 +3,7 @@ body {
     display: grid;
     place-content: center;
     height: 100vh;
-    background: #1A4341;
+    background: #1a4341;
 }
 
 .container {
@@ -18,25 +18,25 @@ body {
     width: 150px;
     height: 20px;
     border-radius: 10px;
-    background: #F3AC3C;
+    background: #f3ac3c;
 }
 
 .pump-top::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0px;
     right: 0;
     width: 20px;
     height: 40px;
     border-radius: 10px;
-    background: #F3AC3C;
+    background: #f3ac3c;
 }
 
 .pump {
     margin: auto;
     width: 20px;
     height: 20px;
-    background: #F3AC3C;
+    background: #f3ac3c;
 }
 
 .cap {
@@ -45,14 +45,14 @@ body {
     height: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background: #F3AC3C;
+    background: #f3ac3c;
 }
 
 .top {
     position: relative;
     width: 100px;
     height: 60px;
-    background: #F3AC3C;
+    background: #f3ac3c;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -75,14 +75,14 @@ body {
 }
 
 .ball-1 {
-    top:30px;
+    top: 30px;
     right: 0;
-    background: #F3AC3C;
+    background: #f3ac3c;
 }
 
 .ball-2 {
     top: -24px;
-    background: #998235
+    background: #998235;
 }
 
 .bubble {

@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: 430px;
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transform: rotateX(10deg) rotateY(-18deg) rotateZ(3deg);
+    transition: 0.5s cubic-bezier(0.76, 1.87, 0.65, 0.61);
+}
+
+.card-inner,
+.card-back {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 1em;
+    font-size: 22px;
+    border-radius: inherit;
+    color: #fff;
+    backface-visibility: hidden;
+}
+
+.card-inner {
+    background-image: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%), url(../img/bg-earth.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-inner .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-inner .logo img {
+    width: 55px;
+}
+
+.card-inner .numbers {
+    display: flex;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    color: #fff;
+    background-blend-mode: overlay;
+    text-shadow: 2px 2px 0 rgba(123, 122, 122, 0.5);
+    background-image: linear-gradient(to bottom, #ededed 20%, #bababa 70%), none, linear-gradient(120deg, transparent 10%, white 40%, white 60%, transparent 90%);
+    background-size: cover, cover, 200%;
+    background-position: 50% 50%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.card-inner .card-puce {
+    width: 60px;
+    transform: rotate(90deg);
+}
+
+.identity {
+    color: rgb(219, 214, 214);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-back {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #fdb931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%), url(../img/bg-earth.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card-back .signature {
+    height: 40px;
+    background-color: #fff;
+}
+
+.container:hover .card {
+    transform: rotateX(10deg) rotateY(-198deg) rotateZ(-3deg);
+}

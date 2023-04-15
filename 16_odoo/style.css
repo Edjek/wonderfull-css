@@ -18,12 +18,12 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 20px solid #8F8F8F;
+    border: 20px solid #8f8f8f;
     margin: 1px;
 }
 
 .pink {
-    border: 20px solid #714B67;
+    border: 20px solid #714b67;
 }
 
 .d::after {
@@ -32,7 +32,7 @@ body {
     width: 20px;
     height: 70px;
     border-radius: 20px;
-    background: #8F8F8F;
+    background: #8f8f8f;
     right: -20px;
-    top: -40px
+    top: -40px;
 }

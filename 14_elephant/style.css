@@ -22,7 +22,7 @@ body {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background: #1A4341;
+    background: #1a4341;
 }
 
 .head::before,
@@ -33,14 +33,14 @@ body {
     width: 80px;
     height: 180px;
     border-radius: 50%;
-    background: #0B2429;
-    box-shadow: inset 15px 0 0 1px #1A4341;
+    background: #0b2429;
+    box-shadow: inset 15px 0 0 1px #1a4341;
     z-index: -1;
 }
 
 .head::after {
     left: 160px;
-    box-shadow: inset -15px 0 0 1px #1A4341;
+    box-shadow: inset -15px 0 0 1px #1a4341;
 }
 
 .eye {
@@ -49,7 +49,7 @@ body {
     width: 20px;
     height: 10px;
     margin: 10px 10px;
-    background: #0B2429;
+    background: #0b2429;
     border: 10px solid #998235;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -76,5 +76,5 @@ body {
     margin: 10px 10px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    background: #0B2429;
+    background: #0b2429;
 }

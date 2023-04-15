@@ -1,0 +1,99 @@
+:root {
+    --cl-text: #333;
+    --bg-cl: rgb(108, 68, 146);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, var(--bg-cl), white);
+    color: var(--cl-text);
+}
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    width: clamp(450px, 25vw, 600px);
+    aspect-ratio: 1.5/1;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 8px 16px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.card:hover {
+    box-shadow: 8px 16px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5%);
+}
+
+.card > a {
+    position: absolute;
+    inset: 0;
+}
+
+.card-head {
+    flex: 1 0 50%;
+    height: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 20px;
+}
+
+.card-title {
+    font-size: clamp(20px, 7vw, 50px);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card-content {
+    font-family: sans-serif;
+    color: #666;
+}
+
+.btn {
+    position: relative;
+    z-index: 2;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: var(--bg-cl);
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}

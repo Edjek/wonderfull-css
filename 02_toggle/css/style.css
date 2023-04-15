@@ -48,17 +48,17 @@ body {
     left: 15px;
 }
 
-.wrapper:active span {
+.wrapper.active span {
     transform: translateX(60px);
 }
 
-.wrapper:active span:nth-child(1) {
+.wrapper.active span:nth-child(1) {
     transform: translateX(0) rotate(45deg);
     transition-delay: 0.125s;
     width: 40px;
 }
 
-.wrapper:active span:nth-child(2) {
+.wrapper.active span:nth-child(2) {
     transform: translateX(0) rotate(315deg);
     transition-delay: 0.25s;
     width: 40px;

@@ -34,12 +34,7 @@ body {
     content: '';
     inset: -100px;
     border-radius: 10px;
-    background-image: conic-gradient(
-        transparent,
-        transparent,
-        transparent,
-        rgb(26, 26, 234)
-    );
+    background-image: conic-gradient(transparent, transparent, transparent, rgb(26, 26, 234));
     animation: animate 3s linear infinite;
 }
 
@@ -48,12 +43,7 @@ body {
     content: '';
     inset: -100px;
     border-radius: 10px;
-    background-image: conic-gradient(
-        transparent,
-        transparent,
-        transparent,
-        rgb(185, 0, 195)
-    );
+    background-image: conic-gradient(transparent, transparent, transparent, rgb(185, 0, 195));
     z-index: -1;
     animation: animate 3s linear -1.5s infinite;
 }

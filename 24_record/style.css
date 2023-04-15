@@ -29,26 +29,28 @@ body {
     height: 135px;
     border-top: 1px solid #fff8f3;
     border-radius: 0 0 10px 10px;
-    background: linear-gradient(#fff8f3 0%,
-            #fff8f3 25%,
-            #6a8372 25.1%,
-            #6a8372 27%,
-            #fff8f3 27.1%,
-            #fff8f3 40%,
-            #6a8372 40.1%,
-            #6a8372 44%,
-            #fff8f3 44.1%,
-            #fff8f3 55%,
-            #6a8372 55.1%,
-            #6a8372 65%,
-            #fff8f3 65.1%,
-            #fff8f3 75%,
-            #6a8372 75.1%,
-            #6a8372 100%);
+    background: linear-gradient(
+        #fff8f3 0%,
+        #fff8f3 25%,
+        #6a8372 25.1%,
+        #6a8372 27%,
+        #fff8f3 27.1%,
+        #fff8f3 40%,
+        #6a8372 40.1%,
+        #6a8372 44%,
+        #fff8f3 44.1%,
+        #fff8f3 55%,
+        #6a8372 55.1%,
+        #6a8372 65%,
+        #fff8f3 65.1%,
+        #fff8f3 75%,
+        #6a8372 75.1%,
+        #6a8372 100%
+    );
 }
 
 .sticker::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: -25px;
@@ -140,7 +142,6 @@ body {
 }
 
 @keyframes record {
-
     0%,
     10% {
         box-shadow: 0 0 0 2px #000;
@@ -153,7 +154,6 @@ body {
 }
 
 @keyframes record-b {
-
     0%,
     10% {
         box-shadow: 0 0 0 50px #000;

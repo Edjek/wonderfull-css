@@ -1,5 +1,5 @@
-const mic  = document.querySelector(".mic");
+const mic = document.querySelector('.mic');
 
-mic.addEventListener("click", function () {
-	mic.classList.toggle("active");
+mic.addEventListener('click', function () {
+    mic.classList.toggle('active');
 });

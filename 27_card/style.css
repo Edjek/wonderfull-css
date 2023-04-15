@@ -1,98 +1,97 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: grid;
-  place-content: center;
-  height: 100vh;
-  background-color: #f7f7f7;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: #f7f7f7;
 }
 
 .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .container .box {
-  position: relative;
-  width: 400px;
-  height: 80px;
-  gap: 30px;
-  background: #fff;
-  cursor: pointer;
-  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.2);
-  transition: .5s ease-in-out;
+    position: relative;
+    width: 400px;
+    height: 80px;
+    gap: 30px;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease-in-out;
 }
 
 .container .box:nth-child(1) {
-  transform: translateX(-70px);
+    transform: translateX(-70px);
 }
 
 .container .box:nth-child(3) {
-  transform: translateX(70px);
+    transform: translateX(70px);
 }
 
 .container:hover .box:nth-child(1) {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 .container:hover .box:nth-child(3) {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 .container .box::before {
-  position: absolute;
-  content: '';
-  width: 6px;
-  height: 100%;
-  background: var(--clr);
-  transition: .5s ease-in-out;
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--clr);
+    transition: 0.5s ease-in-out;
 }
 
 .container .box:hover::before {
-  width: 100%;
+    width: 100%;
 }
 
 .container .box .content {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .container .box .content .icon {
-  min-width: 100px;
-  display: flex;
-  justify-content: center;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 .container .box .content .icon ion-icon {
-  color: var(--clr);
-  font-size: 2.5em;
+    color: var(--clr);
+    font-size: 2.5em;
 }
 
 .container .box .content .text h2 {
-  color: var(--clr);
-  font-size: 1.5em;
-  font-weight: 500;
+    color: var(--clr);
+    font-size: 1.5em;
+    font-weight: 500;
 }
 
-
 .container .box .content .text p {
-  color: #999;
-  font-size: 0.9em;
+    color: #999;
+    font-size: 0.9em;
 }
 
 .container .box:hover .content .icon ion-icon,
 .container .box:hover .content .text h2,
 .container .box:hover .content .text p {
-  color: #fff;
+    color: #fff;
 }

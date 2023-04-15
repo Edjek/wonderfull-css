@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: #F3AC3C;
+    background: #f3ac3c;
     display: grid;
     place-content: center;
     height: 100vh;
@@ -23,12 +23,12 @@ body {
 }
 
 .hear {
-    content: "";
+    content: '';
     position: absolute;
     top: -10px;
     width: 40px;
     height: 40px;
-    background: #1A4341;
+    background: #1a4341;
     border: 10px solid #998235;
     border-radius: 50%;
     z-index: -1;
@@ -47,7 +47,7 @@ body {
     top: 0px;
     width: 0px;
     height: 0px;
-    border-top: 25px solid #1A4341;
+    border-top: 25px solid #1a4341;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
 }
@@ -61,7 +61,7 @@ body {
 .eye {
     width: 20px;
     height: 20px;
-    background: #1A4341;
+    background: #1a4341;
     border-radius: 50%;
     margin: 30px;
 }
@@ -71,7 +71,7 @@ body {
     top: 95px;
     width: 100px;
     height: 40px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 60px 60px 150px 150px;
     overflow: hidden;
 }
@@ -81,8 +81,8 @@ body {
     top: 10px;
     width: 20px;
     height: 10px;
-    background: #FFFFFF;
-    border: 10px solid #1A4341;
+    background: #ffffff;
+    border: 10px solid #1a4341;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top: 0;
@@ -102,5 +102,5 @@ body {
     left: 69px;
     width: 11px;
     height: 31px;
-    background: #1A4341;
+    background: #1a4341;
 }

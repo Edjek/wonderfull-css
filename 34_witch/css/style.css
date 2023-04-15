@@ -141,8 +141,7 @@ body {
     height: 55px;
     border-radius: 50%;
     background-color: var(--white);
-    box-shadow: 0 0 13px var(--white), 0 0 0 30px var(--shadow-medium),
-        0 0 0 60px var(--shadow-dark), 0 0 0 90px var(--shadow-darker);
+    box-shadow: 0 0 13px var(--white), 0 0 0 30px var(--shadow-medium), 0 0 0 60px var(--shadow-dark), 0 0 0 90px var(--shadow-darker);
 }
 
 .moon::before {
@@ -165,8 +164,7 @@ body {
     height: 2px;
     border-radius: 50%;
     background-color: #aaa;
-    box-shadow: -70px -20px 0 2px #bbb, -60px -50px 0 1px #dddddddd,
-        -40px -35px 0 1px #bbb, -30px -10px 0 1px #bbbbbba1;
+    box-shadow: -70px -20px 0 2px #bbb, -60px -50px 0 1px #dddddddd, -40px -35px 0 1px #bbb, -30px -10px 0 1px #bbbbbba1;
 }
 
 .ghost {

@@ -53,13 +53,11 @@ body {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 4px 4px 8px #2b2b2b,
-        -4px -4px 8px #3b3b3b;
+    box-shadow: 4px 4px 8px #2b2b2b, -4px -4px 8px #3b3b3b;
 }
 
 .btn:active {
-    box-shadow: inset 4px 4px 8px #2b2b2b,
-        inset -4px -4px 8px #3b3b3b;
+    box-shadow: inset 4px 4px 8px #2b2b2b, inset -4px -4px 8px #3b3b3b;
 }
 
 .btn-reset {
@@ -68,8 +66,7 @@ body {
 }
 
 .btn-reset:active {
-    box-shadow: inset 4px 4px 8px #a75502,
-        inset -4px -4px 8px #ec9946;
+    box-shadow: inset 4px 4px 8px #a75502, inset -4px -4px 8px #ec9946;
 }
 
 .btn-submit {
@@ -79,6 +76,5 @@ body {
 }
 
 .btn-submit:active {
-    box-shadow: inset 4px 4px 8px rgb(1, 95, 18),
-        inset -4px -4px 8px #00aa00;
+    box-shadow: inset 4px 4px 8px rgb(1, 95, 18), inset -4px -4px 8px #00aa00;
 }

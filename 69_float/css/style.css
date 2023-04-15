@@ -13,15 +13,14 @@ body {
     max-width: 600px;
     margin: 20vh auto 0;
     padding: 30px;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
 }
 
 .container:hover {
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .container h1 {
@@ -44,8 +43,3 @@ body {
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
     transition: .2s;
 }
-
-.container:hover img {
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
-}
-

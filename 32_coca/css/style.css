@@ -88,13 +88,13 @@ body {
 .card:hover .content {
     opacity: 1;
     visibility: visible;
-    transition-delay: .8s;
+    transition-delay: 0.8s;
 }
 
 .card .content h2 {
     text-transform: uppercase;
 }
-     
+
 .card .content p {
     margin: 15px 0;
 }
@@ -111,7 +111,7 @@ body {
 .card .bottle {
     position: relative;
     opacity: 0;
-    transform: translateX(-100px) ;
+    transform: translateX(-100px);
     visibility: hidden;
     width: 25%;
     transition: 0.5s 0s;
@@ -120,7 +120,7 @@ body {
 .card:hover .bottle {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0) ;
+    transform: translateX(0);
     width: 25%;
-    transition-delay: .8s;
+    transition-delay: 0.8s;
 }

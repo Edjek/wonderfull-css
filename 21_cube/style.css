@@ -65,7 +65,6 @@ body {
 }
 
 @keyframes shadow {
-
     0%,
     100% {
         transform: scaleX(1.4);

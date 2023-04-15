@@ -45,7 +45,6 @@ body {
 }
 
 @keyframes load-a {
-
     0%,
     10% {
         transform: scale(0);
@@ -57,7 +56,6 @@ body {
 }
 
 @keyframes load-b {
-
     0%,
     40% {
         transform: scale(0);
@@ -69,7 +67,6 @@ body {
 }
 
 @keyframes load-c {
-
     0%,
     70% {
         transform: scale(0);
