@@ -10,7 +10,7 @@ body {
     display: grid;
     place-content: center;
     min-height: 100vh;
-    box-sizing: border-box;
+    background-color: #6c9171;
 }
 
 .frame {
@@ -27,9 +27,8 @@ body {
     background: #333;
     color: #fff;
     font-family: 'Open Sans', Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
+
 .morse {
     display: grid;
     place-content: center;
@@ -37,10 +36,6 @@ body {
     height: 60%;
 }
 
-.code {
-    background: white;
-    box-shadow: 0 0 10px 2px #fff;
-}
 .keyboard {
     position: relative;
     width: 100%;
@@ -61,14 +56,38 @@ body {
 }
 
 .e,
-.code {
+.light {
     width: 30px;
     height: 30px;
     line-height: 30px;
     margin: 5px 5px;
     border-radius: 50%;
+    transition: 0.3s;
 }
 
-.e:hover {
-    background: #999;
+#light.on {
+    background-color: white;
+    box-shadow: 0 0 15px 5px #fff;
+}
+
+.e {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(145deg, #939393, #333);
+    box-shadow: 2px 2px 4px #666666, -2px -2px 4px #636363;
+}
+
+.e::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #333, #939393);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.e:hover::before {
+    opacity: 1;
 }

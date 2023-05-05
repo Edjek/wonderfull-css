@@ -5,10 +5,10 @@
 }
 
 body {
-    margin: 0;
     display: grid;
     place-content: center;
     height: 100vh;
+    background-color: #305e00;
 }
 
 .lion {
@@ -17,13 +17,15 @@ body {
     align-items: center;
     width: 400px;
     height: 400px;
-    background: repeating-conic-gradient(#0000 0 13deg, #fff3 0 15deg), repeating-conic-gradient(#0000 0 27deg, #0001 0 29deg), repeating-conic-gradient(#c60 0 21deg, #f80 0 23deg);
+    background: repeating-conic-gradient(#0000 0 13deg, #fff3 0 15deg),
+        repeating-conic-gradient(#0000 0 27deg, #0001 0 29deg),
+        repeating-conic-gradient(#c60 0 21deg, #f80 0 23deg);
     border-radius: 100px;
     transform: rotate(45deg);
 }
 
 .lion-shadow {
-    box-shadow: 15px 15px 0px 0px #0002;
+    box-shadow: 15px 15px 5px #0002;
 }
 
 .ear {
@@ -249,7 +251,6 @@ body {
     }
 
     100% {
-        transform-origin: top;
         transform: translateX(5px);
     }
 }
@@ -257,10 +258,10 @@ body {
 @keyframes shadow {
     0%,
     70% {
-        box-shadow: 20px 30px 10px 10px #0002;
+        box-shadow: -20px 30px 10px #0002;
     }
 
     100% {
-        box-shadow: 25px 35px 10px 10px #0002;
+        box-shadow: -25px 35px 10px #0002;
     }
 }

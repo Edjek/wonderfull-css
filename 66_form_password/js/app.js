@@ -1,8 +1,8 @@
-const eye = document.getElementById('show');
+const show = document.getElementById('show');
 
-eye.addEventListener('click', () => {
-    eye.classList.toggle('bi-eye-slash');
-    eye.classList.toggle('bi-eye');
+show.addEventListener('click', () => {
+    show.classList.toggle('bi-eye-slash');
+    show.classList.toggle('bi-eye');
     const type = pswd.getAttribute('type') === 'password' ? 'text' : 'password';
     pswd.setAttribute('type', type);
 });

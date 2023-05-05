@@ -1,0 +1,127 @@
+:root {
+    --cl-text: #333;
+    --cl-bg: #7a45ff;
+    --border: 0.5vh solid #000;
+    --bx-shadow: 0 0.4vh #000;
+    --bd-radius: 5vh;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cl-bg);
+    color: var(--cl-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p-4 {
+    position: relative;
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.game {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1vh;
+    width: 70vh;
+    height: 70vh;
+    padding: 1vh;
+    border-radius: var(--bd-radius);
+    border: var(--border);
+    background-color: #fff;
+    box-shadow: var(--bx-shadow);
+}
+
+.case {
+    position: relative;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 100%;
+    background-color: var(--cl-bg);
+    box-shadow: inset 0 1.2vh rgb(0, 0, 0);
+}
+
+.case.active {
+    background-color: #fecd69;
+    box-shadow: inset 0 0.5vh rgba(0, 0, 0, 0.8);
+}
+
+.result {
+    position: absolute;
+    bottom: -24vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vh;
+    height: 25vh;
+    background-color: #fe6687;
+    border-radius: var(--bd-radius);
+    border: var(--border);
+    box-shadow: var(--bx-shadow);
+}
+
+.player {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    width: 20vh;
+    height: 25vh;
+    border-radius: var(--bd-radius);
+    border: var(--border);
+    box-shadow: var(--bx-shadow);
+    background-color: #fff;
+    font-size: 2.5vh;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.player .case {
+    position: absolute;
+    top: -20%;
+    z-index: 10;
+    border: var(--border);
+    box-shadow: var(--bx-shadow);
+}
+
+.player-1 .case {
+    background-color: #fe6687;
+}
+
+.player-2 .case {
+    background-color: #fecd69;
+}
+
+.player-1 {
+    top: 50%;
+    transform: translate(-150%, -50%);
+}
+
+.player-2 {
+    top: 50%;
+    right: 0;
+    transform: translate(150%, -50%);
+}
+
+.score,
+.result {
+    font-size: 6vh;
+}
