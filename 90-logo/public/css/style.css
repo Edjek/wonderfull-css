@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+}
+
+.logo {
+    position: relative;
+    perspective: 100px;
+}
+
+.cloud {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 20rem;
+}
+
+.cloud:nth-child(1) {
+    color: #067bc2;
+    transform: translate(-48%, -53.5%);
+}
+.cloud:nth-child(2) {
+    color: #84bcda;
+    transform: translate(-46%, -57%);
+}
+.cloud:nth-child(3) {
+    color: #ecc30b;
+    transform: translate(-44%, -60.5%);
+}
+.cloud:nth-child(4) {
+    color: #f37748;
+    transform: translate(-42%, -63%);
+}
+.cloud:nth-child(5) {
+    color: #d56062;
+    transform: translate(-40%, -66.5%);
+}

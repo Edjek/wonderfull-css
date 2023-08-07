@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222;
+    background-image: radial-gradient(#333 1%, transparent 10%);
+    background-size: 5vmin 5vmin;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*  */

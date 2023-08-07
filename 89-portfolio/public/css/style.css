@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Miriam+Libre:regular,700);
+
+:root {
+    --cl-text: #666;
+    --cl-text-dark: #111;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--cl-text);
+    font-family: 'Mulish', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cl-text);
+    transition: 0.3s;
+}
+
+/* HEADER */
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1280px;
+    margin: auto;
+    padding: 1.2rem;
+}
+
+.logo {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 0.15rem;
+    color: #666;
+}
+
+.logo:hover {
+    color: var(--cl-text-dark);
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-family: 'Miriam libre', sans-serif;
+}
+.navbar a:hover {
+    color: #111;
+}
+
+.navbar a:not(:last-of-type)::after,
+.footer a:not(:last-of-type)::after {
+    content: '/';
+    position: absolute;
+    margin: 0 1rem;
+    color: rgb(44, 105, 196);
+}
+
+/* HERO */
+.hero-wrap {
+    max-width: 1280px;
+    margin: auto;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero-wrap h1 {
+    margin-bottom: 1.2rem;
+    font-size: 2.5rem;
+    color: var(--cl-text-dark);
+    animation: show 0.8s 0.4s backwards;
+}
+
+.hero-wrap p {
+    font-size: 1.1rem;
+    animation: show 0.8s 0.6s backwards;
+}
+
+/* PRESENTATION */
+.presentation-wrap {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 2rem 3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.presentation-wrap h2 {
+    font-family: 'Miriam libre', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #999;
+    writing-mode: sideways-lr;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    flex: 1 0 20rem;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem 1rem;
+}
+
+.card-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: var(--cl-text-dark);
+}
+
+.card-content p {
+    font-family: 'Miriam libre', sans-serif;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.card a {
+    position: absolute;
+    inset: 0;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1280px;
+    margin: auto;
+    padding: 1.2rem;
+    border-top: 1px solid #ddd;
+}
+
+.footer a:hover {
+    color: #111;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .presentation-wrap {
+        display: block;
+    }
+
+    .presentation-wrap h2 {
+        writing-mode: horizontal-tb;
+        margin-bottom: 1rem;
+    }
+}

@@ -58,7 +58,7 @@
     background-color: #000;
     border-radius: 50%;
     color: #fff;
-    animation: allow 0.7s infinite ease-in-out;
+    animation: allow .6s infinite linear alternate;
 }
 
 @keyframes allow {

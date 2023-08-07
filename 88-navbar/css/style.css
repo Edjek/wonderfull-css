@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .navbar {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 15rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+
+    .navbar a {
+        display: block;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.open i:nth-child(1) {
+        display: none;
+    }
+
+    .menu-toggle i:nth-child(1) {
+        display: block;
+    }
+
+    .menu-toggle.open i:nth-child(2) {
+        display: block;
+    }
+
+    .menu-toggle i:nth-child(2) {
+        display: none;
+    }
+
+    .menu-toggle.open + .navbar {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+    }
+}
