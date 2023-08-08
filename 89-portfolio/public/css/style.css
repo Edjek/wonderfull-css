@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import url(https://fonts.googleapis.com/css?family=Miriam+Libre:regular,700);
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&family=Mulish:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
     --cl-text: #666;
@@ -31,11 +30,13 @@ a {
 }
 
 /* HEADER */
-.wrap {
+.header-wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 2rem;
     max-width: 1280px;
+    height: 4rem;
     margin: auto;
     padding: 1.2rem;
 }
@@ -69,6 +70,14 @@ a {
     position: absolute;
     margin: 0 1rem;
     color: rgb(44, 105, 196);
+}
+
+.menu-toggle {
+    display: none;
+    z-index: 100;
+    color: var(--cl-text-dark);
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 /* HERO */
@@ -109,7 +118,7 @@ a {
     writing-mode: sideways-lr;
 }
 
-.projects {
+.project-card {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -190,5 +199,68 @@ a {
     .presentation-wrap h2 {
         writing-mode: horizontal-tb;
         margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .wrap {
+        padding: 1.2rem;
+    }
+
+    .hero-wrap {
+        padding: 3rem 1rem;
+    }
+
+    .presentation-wrap {
+        padding: 0 1rem 3rem;
+    }
+
+    .navbar {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        background-color: #fff;
+        overflow: hidden;
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: 0.4s;
+    }
+
+    .navbar a {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar a:not(:last-of-type)::after {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle i:nth-child(1) {
+        display: block;
+    }
+
+    .menu-toggle i:nth-child(2) {
+        display: none;
+    }
+
+    .menu-toggle.open i:nth-child(1) {
+        display: none;
+    }
+
+    .menu-toggle.open i:nth-child(2) {
+        display: block;
+    }
+
+    .menu-toggle.open + .navbar {
+        visibility: visible;
+        transform: translate(0);
     }
 }
