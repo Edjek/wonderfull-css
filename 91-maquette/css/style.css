@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root {
+    --cl-text: #333;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Torus Notched', sans-serif;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 100vh;
+    font-family: 'Torus Notched', sans-serif;
+    color: var(--cl-text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--cl-text);
+}
+
+section {
+    width: 50vw;
+    height: 30vh;
+    margin: 10vh auto;
+}
+
+.section1 {
+    background-color: rgb(73, 139, 225);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.item {
+    flex: 1 1 300px;
+    background-color: pink;
+    border-radius: 10px;
+}
+
+.fill {
+    background-color: #daf7a6;
+    width: fit-content;
+}
+
+.fill:nth-of-type(2) {
+    background-color: #ffc300;
+    width: min-content;
+}
+
+.fill:nth-of-type(3) {
+    background-color: #ff5733;
+    width: max-content;
+}
