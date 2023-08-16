@@ -23,9 +23,9 @@ body::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: #af4c4c;
+    background-color: rgb(214, 68, 39);
     opacity: 0;
-    transition: var(--transition);
+    transition: opacity var(--transition);
 }
 
 body.active::before {
@@ -37,10 +37,14 @@ body.active::before {
     width: 25rem;
     height: 10rem;
     padding: 0.5rem;
-    border: none;
+    border: 0.5rem solid rgba(0, 0, 0, 0.2);
     border-radius: 15rem;
     background-color: #2e394d;
     overflow: hidden;
+}
+
+.toggle input[type='checkbox'] {
+    display: none;
 }
 
 .moon {
@@ -51,12 +55,11 @@ body.active::before {
     border-radius: 50%;
     background: #fff;
     overflow: hidden;
-    transition: var(--transition);
+    transition: transform 0.7s cubic-bezier(0.17, 0.67, 0.47, 1.4);
 }
 
 .moon.active {
     transform: translateX(15rem) rotate(360deg);
-    box-shadow: none;
 }
 
 .moon::before {
@@ -65,11 +68,11 @@ body.active::before {
     top: 0;
     left: 0;
     width: 0.5rem;
-    height: 0.5rem;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     box-shadow: 100px 45px 0 3px #acb5c5, 50px 30px 0 8px #acb5c5,
-        70px 75px 0 2px #acb5c5, 110px 110px 0 5px #acb5c5,
-        105px 10px 0 6px #acb5c5, 10px 65px 0 3px #acb5c5, 30px 90px 0 #acb5c5,
+        70px 75px 0 2px #acb5c5, 110px 100px 0 5px #acb5c5,
+        95px 10px 0 6px #acb5c5, 10px 65px 0 3px #acb5c5, 30px 90px 0 #acb5c5,
         50px 110px 0 2px #acb5c5, 105px 70px 0 0 #acb5c5,
         85px 85px 0 -1px #acb5c5;
 }
@@ -80,15 +83,11 @@ body.active::before {
     z-index: 100;
     inset: 0;
     border-radius: 50%;
-    background: linear-gradient(
-        -45deg,
-        #314885 15%,
-        #6f64ea 35%,
-        #7971da 50%,
-        #93d4e5 100%
-    );
+    background: linear-gradient(-45deg, #ff0000, #ffff00);
+    box-shadow: 0px 0px 22px rgb(173, 15, 15);
+
     opacity: 0;
-    transition: var(--transition);
+    transition: opacity var(--transition);
 }
 
 .moon.active::after {
