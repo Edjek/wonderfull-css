@@ -1,0 +1,104 @@
+:root {
+    --text-color: #333;
+    --main-color: #1f1f1f;
+    --main-color-hover: #2a2a2a;
+    --border-radius: 0.4rem;
+    --padding: 15px 45px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(https://wallpaperset.com/w/full/3/1/b/96893.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cl-text);
+}
+
+.modal-btn {
+    position: relative;
+    z-index: 1;
+    padding: var(--padding);
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--main-color);
+    box-shadow: 6px 12px 12px rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: var(--border-radius);
+    background-color: var(--main-color-hover);
+    box-shadow: 6px 12px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.modal-btn:hover::before {
+    opacity: 1;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-overlay.active {
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 30rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    scale: 0;
+}
+
+.modal-overlay.active .modal {
+    scale: 1;
+    transition: scale 0.2s;
+}
+
+.close-modal-btn {
+    width: 100%;
+}
