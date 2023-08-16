@@ -1,11 +1,9 @@
 const body = document.querySelector('body')
 const toggle = document.querySelector('#toggle')
-const moon = document.querySelector('#moon')
-const checkbox = document.querySelector('#toggle input[type=checkbox]')
+const star = document.querySelector('#star')
 
 
 toggle.addEventListener('change', () => {
-    moon.classList.toggle('active')
+    star.classList.toggle('active')
     body.classList.toggle('active')
-    console.log(checkbox.checked);
 })

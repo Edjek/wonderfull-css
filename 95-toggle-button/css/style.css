@@ -23,7 +23,7 @@ body::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgb(214, 68, 39);
+    background-color: #d8430d;
     opacity: 0;
     transition: opacity var(--transition);
 }
@@ -47,7 +47,7 @@ body.active::before {
     display: none;
 }
 
-.moon {
+.star {
     display: block;
     position: relative;
     height: 100%;
@@ -58,11 +58,11 @@ body.active::before {
     transition: transform 0.7s cubic-bezier(0.17, 0.67, 0.47, 1.4);
 }
 
-.moon.active {
+.star.active {
     transform: translateX(15rem) rotate(360deg);
 }
 
-.moon::before {
+.star::before {
     content: '';
     position: absolute;
     top: 0;
@@ -77,7 +77,7 @@ body.active::before {
         85px 85px 0 -1px #acb5c5;
 }
 
-.moon::after {
+.star::after {
     content: '';
     position: absolute;
     z-index: 100;
@@ -90,6 +90,6 @@ body.active::before {
     transition: opacity var(--transition);
 }
 
-.moon.active::after {
+.star.active::after {
     opacity: 1;
 }
