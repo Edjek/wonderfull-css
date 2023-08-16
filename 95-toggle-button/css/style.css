@@ -1,5 +1,5 @@
 :root {
-    --transition: 0.5s ease-out;
+    --transition: 0.4s ease-out;
 }
 
 *,
@@ -11,11 +11,25 @@
 }
 
 body {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: #2f439c;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background-color: #af4c4c;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+body.active::before {
+    opacity: 1;
 }
 
 .toggle {
@@ -35,7 +49,7 @@ body {
     height: 100%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background: #fff57f;
+    background: #fff;
     overflow: hidden;
     transition: var(--transition);
 }
@@ -53,11 +67,11 @@ body {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    box-shadow: 100px 45px 0 3px #546583, 50px 30px 0 8px #546583,
-        70px 75px 0 2px #546583, 110px 110px 0 5px #546583,
-        105px 10px 0 6px #546583, 10px 65px 0 3px #546583, 30px 90px 0 #546583,
-        50px 110px 0 2px #546583, 105px 70px 0 0 #546583,
-        85px 85px 0 -1px #546583;
+    box-shadow: 100px 45px 0 3px #acb5c5, 50px 30px 0 8px #acb5c5,
+        70px 75px 0 2px #acb5c5, 110px 110px 0 5px #acb5c5,
+        105px 10px 0 6px #acb5c5, 10px 65px 0 3px #acb5c5, 30px 90px 0 #acb5c5,
+        50px 110px 0 2px #acb5c5, 105px 70px 0 0 #acb5c5,
+        85px 85px 0 -1px #acb5c5;
 }
 
 .moon::after {
