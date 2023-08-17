@@ -23,7 +23,7 @@ body::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: #d8430d;
+    background-color: #f48507;
     opacity: 0;
     transition: opacity var(--transition);
 }
@@ -34,13 +34,14 @@ body.active::before {
 
 .toggle {
     position: relative;
-    width: 25rem;
+    min-width: 25rem;
     height: 10rem;
     padding: 0.5rem;
     border: 0.5rem solid rgba(0, 0, 0, 0.2);
     border-radius: 15rem;
     background-color: #2e394d;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .toggle input[type='checkbox'] {
