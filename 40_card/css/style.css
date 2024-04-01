@@ -11,8 +11,8 @@
 body {
     display: grid;
     place-content: center;
-    height: 100vh;
-    background-color: rgba(238, 238, 238, 0.2);
+    min-height: 100vh;
+    background-color: rgba(255, 166, 0, 0.5);
     font-family: 'Mali', cursive;
     color: rgb(0, 44, 80);
 }
@@ -53,7 +53,7 @@ body {
     border: 10px solid #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     transform: rotate(-3deg);
-    transition: 0.2s 0.15s cubic-bezier(0.56, 0.29, 0.61, 1.5);
+    transition: transform 0.2s 0.15s cubic-bezier(0.56, 0.29, 0.61, 1.5);
 }
 
 .card:hover img {
