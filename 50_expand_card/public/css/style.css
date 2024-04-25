@@ -33,7 +33,7 @@ body {
 }
 
 .card {
-    flex: 0 0 60px;
+    flex: 0 1 60px;
     position: relative;
     border-radius: 40px;
     cursor: pointer;
