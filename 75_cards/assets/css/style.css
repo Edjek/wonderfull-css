@@ -1,14 +1,13 @@
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background-color: #111;
 }
@@ -23,8 +22,9 @@ body {
 .card {
     position: absolute;
     aspect-ratio: 5/7;
+    border: 5px solid #fff;
     overflow: hidden;
-    transition: 0.5s;
+    transition: 0.3s cubic-bezier(0.14, 0.8, 0.37, 0.85);
 }
 
 .card img {
@@ -33,11 +33,8 @@ body {
     object-fit: cover;
 }
 
-.card:nth-child(8) {
-    border: 4px solid #fff;
-}
-
 .card-big {
+    min-width: 10rem;
     width: 30vmin;
     border-radius: 1vmin;
 }
@@ -60,12 +57,13 @@ body {
 }
 
 .card:nth-child(8) {
+    border: 4px solid #fff;
     transform: translate(5%, 3%) rotate(5deg);
 }
 
 /* HOVER */
 .container:hover .card-big {
-    box-shadow: -20px 20px 20px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: -20px 20px 20px 20px rgba(0, 0, 0, 0.5);
 }
 
 .container:hover .card:nth-child(2) {
@@ -89,7 +87,7 @@ body {
 }
 
 .container:hover .card:nth-child(3) {
-    transform: translate(-300%, 160%) rotate(-15deg);
+    transform: translate(-295%, 170%) rotate(-15deg);
 }
 
 .container:hover .card:nth-child(5) {
@@ -97,5 +95,5 @@ body {
 }
 
 .container:hover .card:nth-child(7) {
-    transform: translate(200%, -130%) rotate(-20deg);
+    transform: translate(200%, -145%) rotate(-20deg);
 }
