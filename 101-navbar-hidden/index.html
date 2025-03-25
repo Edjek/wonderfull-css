@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navbar Interactive</title>
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="assets/js/main.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <div class="navbar__brand">
+                    <a href="#" class="navbar__logo">Logo</a>
+                </div>
+                <button class="navbar__toggle" aria-label="Toggle navigation">
+                    <span class="navbar__toggle-icon"></span>
+                </button>
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="#hero" class="navbar__link">Accueil</a></li>
+                    <li class="navbar__item"><a href="#about" class="navbar__link">À propos</a></li>
+                    <li class="navbar__item"><a href="#contact" class="navbar__link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero" class="hero">
+                <div class="hero__content">
+                    <h1 class="hero__title">Bienvenue sur notre site</h1>
+                    <p class="hero__text">Découvrez nos services exceptionnels</p>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <div class="container">
+                    <h2 class="section__title">À propos</h2>
+                    <p class="section__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <div class="container">
+                    <h2 class="section__title">Contact</h2>
+                    <p class="section__text">Contactez-nous pour plus d'informations.</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
